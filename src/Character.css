@@ -1,0 +1,116 @@
+.Character {
+
+}
+
+.Character-card {
+  display: flex;
+  justify-content: left;
+  padding: 5px 5px 5px 5px;
+}
+
+.Character-img {
+  height: 760px;
+  width: 500px;
+}
+
+.Character-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Nabla';
+  color: orange;
+  height: 10rem;
+  font-size: 50px;
+  text-shadow: 5px 2px red;
+  background-color: slategray;
+  text-align: center;
+  width:100%;
+}
+
+.Character-button {
+  background-color: orange;
+  color: #231F1B;
+  margin-top: 3rem;
+  margin-right: 5rem;
+  opacity: 75%;
+  font-size: 16px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  height: 3rem;
+  width: 9rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.Character-button:hover {
+  background: #231F1B;
+  color: white;
+  font-weight: bold;
+  transition-duration: .5s;
+} 
+
+.Character-desc {
+  padding: 5px;
+  font-family: 'Work Sans';
+  text-align: left;
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  color: #231F1B;
+  position: relative; 
+}
+
+.Character-title {
+  font-family: 'Nabla';
+  font-weight: bold;
+  font-size: 6rem;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  padding-bottom: .5rem;
+}
+
+.comics-header {
+  font-family: 'Nabla';
+  color: orange;
+  height: 10rem;
+  font-size: 50px;
+  text-shadow: 5px 2px red;
+  background-color: slategray;
+  text-align: center;
+  width:100%;
+}
+
+
+.comics {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.comics-main {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  margin: 1rem;
+  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+  text-align: center;
+  border-radius: 50px;
+  background-size: 150%;
+  background-position-y:-110px;
+  background-position-x:center;
+}
+
+.comics-title {
+  font-family: 'Work Sans';
+  text-align: center;
+}
+
+.comics-image {
+  display: flex;
+  justify-content: center;
+  padding: 37px;
+  align-items: center;
+  height: 257px;
+  width: 225px;
+  opacity: 100%;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
