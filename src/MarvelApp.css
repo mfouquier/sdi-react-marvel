@@ -45,8 +45,8 @@
   top:20px
 }
 
-.Marvelcard img:hover {
-  transform: scale(1.25);
+.Marvelcard-image:hover {
+  transform:scale(0.9);
   opacity: 70%;
 }
 
@@ -61,13 +61,15 @@
   flex-wrap: wrap;
 }
 
+
+
 .Header {
   font-family: 'Nabla';
   color: orange;
-  height: 10rem;
+  height: 25rem;
   font-size: 50px;
   text-shadow: 5px 2px red;
-  background-color: slategray;
+  background-image: url('./images/marvelCharacters.png');
   text-align: center;
   width:100%;
 }

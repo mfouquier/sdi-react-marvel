@@ -1,16 +1,19 @@
 import React, { Component, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import Card from '@mui/material/Card';
+import styled from "styled-components";
 import './Character.css';
+
+
+const linkStyle = {
+  margin: "1rem, 1rem",
+  textDecoration: "none",
+  color: 'blue',
+};
 
 function Character() {
   const location = useLocation();
   const [comics, setComics] = useState([]);
   const [charId, setCharId] = useState(location.state.details.id);
-
-  // console.log('Comics ', location);
-
-  console.log('Char ID ', charId);
 
   const url = `http://gateway.marvel.com/v1/public/characters/${charId}/comics?apikey=605ed486c839d046c084efaf73906147`;
 
@@ -27,10 +30,21 @@ function Character() {
     []
   );
 
+  // useEffect(() => {
+  //   async function getSeries() {
+  //     const response = await fetch('http://gateway.marvel.com/v1/public/characters/1011288/series?apikey=605ed486c839d046c084efaf73906147')
+  //     const data = await response.json();
+  //   }
+  //   getSeries()
+  // }, [])
+
+
+  function Details() {
+    window.location.replace(location.state.details.urls[0].url)
+  }
+
   return (
     <div className="Character">
-
-
       <>
         <div className="Character-header">
           <h1 className="Character-title" key={location.state.details.id}>{location.state.details.name}</h1>
@@ -45,7 +59,13 @@ function Character() {
             alt={location.state.details.name}
             src={location.state.details.thumbnail.path + '/portrait_incredible.jpg'}
           />
-          <p className="Character-desc">{location.state.details.description}</p>
+          <p className="Character-desc">{location.state.details.description}<br />
+
+            <Link to="/Details" state={{ location: location }} style={linkStyle}>Get more details on Marvel.com</Link><br />
+            <Link to="/Wiki" state={{ location: location }} style={linkStyle}>Check out the Marvel.com Wiki for this character!</Link>
+
+          </p>
+
         </div>
 
         <h2 className='comics-header'>Comics</h2>

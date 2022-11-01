@@ -1,5 +1,11 @@
 .Character {
-
+  background-color: black;
+  color: black;
+  background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.6)), url('./images/marvelCharacters1.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -moz-background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .Character-card {
@@ -9,30 +15,33 @@
 }
 
 .Character-img {
-  height: 760px;
-  width: 500px;
+  height: 45rem;
+  width: 31rem;
+}
+
+.Character-links {
+  display: block;
 }
 
 .Character-header {
   display: flex;
   justify-content: space-between;
-  font-family: 'Nabla';
-  color: orange;
-  height: 10rem;
+  font-family: 'ccbiffbamboom';
+  color: #EEB634;
+  height: 16%;
   font-size: 50px;
   text-shadow: 5px 2px red;
-  background-color: slategray;
   text-align: center;
   width:100%;
 }
 
 .Character-button {
-  background-color: orange;
+  background-color: #EEB634;
   color: #231F1B;
   margin-top: 3rem;
   margin-right: 5rem;
-  opacity: 75%;
-  font-size: 16px;
+  font-size: 25px;
+  font-weight: bold;
   border-radius: 30px;
   box-sizing: border-box;
   height: 3rem;
@@ -54,12 +63,13 @@
   text-align: left;
   margin-bottom: .5rem;
   font-size: 2rem;
-  color: #231F1B;
+  color: black;
+  font-weight: bold;
   position: relative; 
 }
 
 .Character-title {
-  font-family: 'Nabla';
+  font-family: 'ccbiffbamboom';
   font-weight: bold;
   font-size: 6rem;
   margin-top: 1rem;
@@ -68,12 +78,13 @@
 }
 
 .comics-header {
-  font-family: 'Nabla';
-  color: orange;
+  font-family: 'ccbiffbamboom';
+  color: #EEB634;
   height: 10rem;
-  font-size: 50px;
+  font-size: 6rem;
   text-shadow: 5px 2px red;
-  background-color: slategray;
+  background-color: black;
+  border: #EEB634 2px solid;
   text-align: center;
   width:100%;
 }
@@ -90,7 +101,8 @@
   width: 300px;
   padding: 10px;
   margin: 1rem;
-  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+  background-color: lightslategray;
+  box-shadow: 7px 10px 12px -5px rgba(243, 139, 4, 0.842);
   text-align: center;
   border-radius: 50px;
   background-size: 150%;
@@ -114,3 +126,19 @@
   border-radius: 3px;
   margin-bottom: 1rem;
 }
+
+.comics-image:hover {
+  transform: rotate(10deg);
+}
+
+@font-face {
+  font-family:"ccbiffbamboom";
+  src:url("https://use.typekit.net/af/b8054b/00000000000000003b9b08d8/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/b8054b/00000000000000003b9b08d8/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/b8054b/00000000000000003b9b08d8/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+  }
+
+  @font-face {
+    font-family:"ccbiffbamboomoutline";
+    src:url("https://use.typekit.net/af/2c1f44/00000000000000003b9b08d9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/2c1f44/00000000000000003b9b08d9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/2c1f44/00000000000000003b9b08d9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+    }
