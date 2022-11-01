@@ -110,6 +110,19 @@
   background-position-x:center;
 }
 
+/* .comics-main img:hover .card-front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform: perspective(1000) rotateY(180deg);
+  -moz-transform: perspective(1000) rotateY(180deg);
+  -ms-transform: perspective(1000) rotateY(180deg);
+  -o-transform: perspective(1000) rotateY(180deg);
+  transform: perspective(1000) rotateY(180deg);
+} */
+
 .comics-title {
   font-family: 'Work Sans';
   text-align: center;

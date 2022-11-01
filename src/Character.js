@@ -30,19 +30,6 @@ function Character() {
     []
   );
 
-  // useEffect(() => {
-  //   async function getSeries() {
-  //     const response = await fetch('http://gateway.marvel.com/v1/public/characters/1011288/series?apikey=605ed486c839d046c084efaf73906147')
-  //     const data = await response.json();
-  //   }
-  //   getSeries()
-  // }, [])
-
-
-  function Details() {
-    window.location.replace(location.state.details.urls[0].url)
-  }
-
   return (
     <div className="Character">
       <>
@@ -74,7 +61,10 @@ function Character() {
 
           <div className='comics-main'>
             <h1 key={c.id} className='comics-title'>{c.title}</h1>
-            <img alt={c.title} src={c.thumbnail.path + '/portrait_incredible.jpg'} className='comics-image' />
+            <Link to={`/Creators/${c.id}`} state={{ creators: c.creators }}>
+              <img alt={c.title} src={c.thumbnail.path + '/portrait_incredible.jpg'} className='comics-image card-front' />
+            </Link>
+
 
           </div>
         ))}</div>

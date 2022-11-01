@@ -4,6 +4,7 @@ import MarvelApp from './MarvelApp';
 import Character from './Character';
 import Details from './Details';
 import Wiki from './Wiki';
+import Creators from './Creators';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Character/:id" element={<Character />} />
           <Route path="/Details" element={<Details />} />
           <Route path="/Wiki" element={<Wiki />} />
+          <Route path="/Creators/:id" element={<Creators />} />
         </Routes>
       </Router>
     </div>
