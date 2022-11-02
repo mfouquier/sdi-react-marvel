@@ -10,13 +10,13 @@ import Creators from './Creators';
 
 function App() {
 
-  useEffect(() => {
-    async function getSeries() {
-      const response = await fetch('http://gateway.marvel.com/v1/public/characters/1011288/series?apikey=605ed486c839d046c084efaf73906147')
-      const data = await response.json();
-      console.log('Series data ', data)
-    }
-  }, [])
+  // useEffect(() => {
+  //   async function getSeries() {
+  //     const response = await fetch('http://gateway.marvel.com/v1/public/characters/1011288/series?apikey=605ed486c839d046c084efaf73906147')
+  //     const data = await response.json();
+  //     console.log('Series data ', data)
+  //   }
+  // }, [])
 
   return (
     <div className="App">

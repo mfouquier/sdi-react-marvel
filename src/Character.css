@@ -83,7 +83,7 @@
   height: 10rem;
   font-size: 6rem;
   text-shadow: 5px 2px red;
-  background-color: black;
+  background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
   border: #EEB634 2px solid;
   text-align: center;
   width:100%;
@@ -101,8 +101,8 @@
   width: 300px;
   padding: 10px;
   margin: 1rem;
-  background-color: lightslategray;
-  box-shadow: 7px 10px 12px -5px rgba(243, 139, 4, 0.842);
+  background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
+  box-shadow: 7px 10px 12px 3px rgba(243, 139, 4, 0.842);
   text-align: center;
   border-radius: 50px;
   background-size: 150%;
@@ -110,22 +110,10 @@
   background-position-x:center;
 }
 
-/* .comics-main img:hover .card-front {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  -webkit-transform: perspective(1000) rotateY(180deg);
-  -moz-transform: perspective(1000) rotateY(180deg);
-  -ms-transform: perspective(1000) rotateY(180deg);
-  -o-transform: perspective(1000) rotateY(180deg);
-  transform: perspective(1000) rotateY(180deg);
-} */
-
 .comics-title {
   font-family: 'Work Sans';
   text-align: center;
+  font-size: large;
 }
 
 .comics-image {

@@ -3,6 +3,9 @@ import { ReactDOM } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Character from './Character';
 import IconButton from '@mui/material/IconButton';
+import Autocomplete from '@mui/material/Autocomplete';
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 import { InputAdornment } from '@mui/material';
@@ -13,9 +16,9 @@ function MarvelApp() {
   const abcSearch = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
   let randLetter = abcSearch[Math.floor(Math.random() * 26) + 1]
 
+
   const [charData, setCharData] = useState([]);
   const [searchQuery, setSearchQuery] = useState(randLetter);
-
   const url = new URL(
     `http://gateway.marvel.com/v1/public/characters?apikey=605ed486c839d046c084efaf73906147&limit=100&nameStartsWith=${searchQuery}`
   );
@@ -34,37 +37,35 @@ function MarvelApp() {
     [searchQuery]
   );
 
-  console.log(charData);
-
   return (
     <div>
       <div className="Header">
-
       </div>
 
       <div>
-        <TextField
+        <Autocomplete
+          freeSolo
           id="search-bar"
-          className="search"
-          margin="dense"
-          onInput={(e) => {
-            setSearchQuery(e.target.value);
-          }}
-          label="Search for a Hero"
-          variant="outlined"
-          color="warning"
-          placeholder="Search..."
-          fullWidth
-          InputProps={{
-            endAdornment: (
-              <InputAdornment>
-                <IconButton type="submit" aria-label="search">
-                  <SearchIcon style={{ fill: 'slategray' }} />
-                </IconButton>
-              </InputAdornment>
-            )
-          }}
+          className='search'
+          color='warning'
+          disableClearable
+          options={charData.map((option) => option.name)}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Search for a Hero"
+              color='warning'
+              onInput={(e) => {
+                setSearchQuery(e.target.value);
+              }}
+              InputProps={{
+                ...params.InputProps,
+                type: 'search',
+              }}
+            />
+          )}
         />
+
       </div>
 
       <div className="MarvelDir-cards">

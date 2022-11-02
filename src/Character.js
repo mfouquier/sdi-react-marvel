@@ -23,7 +23,6 @@ function Character() {
         const response = await fetch(url);
         const data = await response.json();
         setComics(data.data.results);
-        console.log(comics);
       }
       getComics();
     },
