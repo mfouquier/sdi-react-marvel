@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Start the application by running ### npm start this will open the application in your browser on http://localhost:3000
+Start the application by running **npm start** this will open the application in your browser on http://localhost:3000
 
 ## Homepage
 
