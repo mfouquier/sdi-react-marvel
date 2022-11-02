@@ -46,9 +46,11 @@ const HomeButton = styled.button`
 
 function Creators() {
   const location = useLocation();
+  const description = location.state
   const creators = location.state.creators.items;
   const [creator, setCreator] = useState([])
 
+  console.log(description)
   useEffect(() => {
     async function getCreators(arr) {
       const creatorArray = []
@@ -63,9 +65,6 @@ function Creators() {
     }
     getCreators(creators);
   }, [location])
-
-  console.log('Original Creators ', creators)
-  console.log('Creator Array ', creator);
 
   return (
     <div className='Character'>

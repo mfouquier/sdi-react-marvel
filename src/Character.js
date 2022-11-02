@@ -58,19 +58,22 @@ function Character() {
 
         <div className='comics'>{comics.map((c) => (
 
-          <div className='comics-main'>
+          < div className='comics-main' >
+            {console.log(c.description)}
             <h1 key={c.id} className='comics-title'>{c.title}</h1>
-            <Link to={`/Creators/${c.id}`} state={{ creators: c.creators }}>
-              <img alt={c.title} src={c.thumbnail.path + '/portrait_incredible.jpg'} className='comics-image card-front' />
-            </Link>
-
-
+            <div className='flip-content'>
+              <Link to={`/Creators/${c.id}`} state={{ creators: c.creators }}>
+                <img alt={c.title} src={c.thumbnail.path + '/portrait_incredible.jpg'} className='comics-image card-front' />
+              </Link>
+            </div>
+            <div className='flip-back'>
+              <p className='back-text'>{c.description}</p>
+            </div>
           </div>
         ))}</div>
       </>
 
-
-    </div>
+    </div >
   );
 }
 

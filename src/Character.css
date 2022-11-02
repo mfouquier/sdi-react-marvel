@@ -120,6 +120,7 @@
   display: flex;
   justify-content: center;
   padding: 37px;
+  backface-visibility: hidden;
   align-items: center;
   height: 257px;
   width: 225px;
@@ -128,8 +129,14 @@
   margin-bottom: 1rem;
 }
 
+
+.back-text {
+  font-size: small;
+  font-family: 'Work Sans';
+}
+
 .comics-image:hover {
-  transform: rotate(10deg);
+  transform: rotate(10deg); 
 }
 
 @font-face {
